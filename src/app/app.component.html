@@ -1,4 +1,4 @@
-<!-- <div class="container">
+<div class="container">
     <p>Add server and Blueprint</p>
 
     <hr>
@@ -8,9 +8,18 @@
     <div class="row">
         <div class="col-xs-12">
 
-            <app-server *ngFor="let serverElement of serverElements" [srvElement]="serverElement"></app-server>
+            <app-server *ngFor="let serverElement of serverElements" [srvElement]="serverElement">
+                <p>
+                    <strong *ngIf="serverElement.type === 'server'" style="color:red">{{serverElement.content}}</strong>
+                    <em *ngIf="serverElement.type === 'blueprint'">{{serverElement.content}}</em>
+                </p>
+            </app-server>
+
+
         </div>
 
-    </div> -->
-<app-customer-list #customer></app-customer-list>
-<p> you have selected : {{customer.selectedCustomer ?.name}}</p>
+    </div>
+    <!-- local referance
+<app-customer-list #customer>
+</app-customer-list>
+<p> you have selected : {{customer.selectedCustomer ?.name}}</p> -->
