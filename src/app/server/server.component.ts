@@ -17,7 +17,7 @@ AfterContentChecked,AfterViewInit,AfterViewChecked,OnDestroy {
 
   ngOnInit(): void {
     console.log("ngOnInit called");
-    console.log("Text content" + this.header.nativeElement.textContent);
+    // console.log("Text content" + this.header.nativeElement.textContent);
   }
 ngOnChanges(changes: SimpleChanges): void {
   console.log("Onchange called");
